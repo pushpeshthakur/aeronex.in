@@ -1,10 +1,14 @@
 import React from 'react'
 import heroCover from '../assets/heroCover.png'
 import { ArrowRight } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 
 
 
-const Hero = () => {
+const Hero = ({onOpenQuote}) => {
+
+  const navigate = useNavigate();
+
   return (
     <section id="home" className="flex h-full w-full">
       <div className="relative w-full flex items-center justify-center">
@@ -28,20 +32,22 @@ const Hero = () => {
 
           
           <div className="flex gap-4 flex-wrap max-sm:flex-col">
-            <a
+            <button
               href="#products"
+              onClick={() => navigate("/products")}
               className="inline-flex items-center justify-center px-6 py-4 rounded-2xl font-semibold text-white bg-indigo-600 hover:bg-indigo-500 transition-all duration-300 hover:-translate-y-0.5"
             >
               Explore Products
               <ArrowRight className="w-5.75 h-3.75 transition-transform duration-300 group-hover:translate-x-1 ml-2" />
-            </a>
-            <a
+            </button>
+            <button
               href="#quote"
+              onClick={() => onOpenQuote?.()}
               className="inline-flex items-center justify-center px-6 py-4 rounded-2xl font-semibold text-white bg-white/10 border border-white/35 backdrop-blur-md transition-all duration-300 hover:bg-white/20 hover:-translate-y-0.5"
             >
               Get a Quote
               <ArrowRight className="w-5.75 h-3.75 transition-transform duration-300 group-hover:translate-x-1 ml-2" />
-            </a>
+            </button>
           </div>
           
         </div>

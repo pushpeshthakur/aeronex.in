@@ -15,7 +15,7 @@ const WhyChoose = () => {
                 title="Built On Engineering Discipline"
                 desc="Four commitments that shape every unit we manufacture."
             />
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-7 m-14" >
+            <div className="grid grid-cols-2 max-sm:grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-7 m-14" >
                 {whyChoose.map((f , i) => (
                     <Reveal key={f.title} delay={i*0.09}>
                         <motion.div 
