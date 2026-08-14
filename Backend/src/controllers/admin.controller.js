@@ -84,7 +84,7 @@ async function logoutAdmin(req, res) {
         res.clearCookie("token", {
             httpOnly: true,
             secure: true,
-            samesite: "none"
+            sameSite: "none"
         });
 
         return res.status(200).json({
