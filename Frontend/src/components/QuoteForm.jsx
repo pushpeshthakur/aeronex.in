@@ -1,6 +1,8 @@
 import {React, useState} from 'react';
 import axios from 'axios';
 
+const API_URL = import.meta.env.VITE_BACKEND_URL;
+
 const QuoteForm = ({onCloseQuote}) => {
   
   const [formData, setFormData] = useState({
@@ -29,7 +31,7 @@ const QuoteForm = ({onCloseQuote}) => {
     setSuccess('');
 
     try{
-      const response =await axios.post("http://localhost:3000/api/quote/upload", formData);
+      const response =await axios.post(`${API_URL}/api/quote/upload`, formData);
       //const response = 
       console.log(response.data)
 
@@ -50,7 +52,7 @@ const QuoteForm = ({onCloseQuote}) => {
       console.error("Quote submission error:",err)
 
       setError(
-        error.response?.data?.message ||
+        err.response?.data?.message ||
         "Failed to submit quote."
       );
     }
