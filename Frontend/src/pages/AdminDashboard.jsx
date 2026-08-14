@@ -2,7 +2,7 @@ import {React, useState, useEffect } from 'react'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-
+const API_URL = import.meta.env.VITE_BACKEND_URL;
 
 const AdminDashboard = () => {
     const navigate = useNavigate();
@@ -18,7 +18,7 @@ const AdminDashboard = () => {
             try {
 
                 const response = await axios.get(
-                    "http://localhost:3000/api/admin/quotes",
+                    `${API_URL}/api/admin/quotes`,
                     { withCredentials: true }
                 );
 
@@ -42,7 +42,7 @@ const AdminDashboard = () => {
 
     const handleLogout = async () => {
         
-        await axios.post("http://localhost:3000/api/admin/logout", 
+        await axios.post(`${API_URL}/api/admin/logout`, 
             {},
             { withCredentials: true}
         )

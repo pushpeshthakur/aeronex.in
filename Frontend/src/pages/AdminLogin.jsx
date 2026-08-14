@@ -4,6 +4,7 @@ import logoName from '../assets/logoName.png';
 import AdminDashboard from './AdminDashboard';
 import { useNavigate } from 'react-router-dom';
 
+const API_URL = import.meta.env.VITE_BACKEND_URL;
 
 const AdminLogin  = () => {
     const navigate = useNavigate();
@@ -15,7 +16,7 @@ const AdminLogin  = () => {
         e.preventDefault();
 
         axios.post(
-            "http://localhost:3000/api/admin/login",
+            `${API_URL}/api/admin/login`,
             { email, password },
             { withCredentials: true }
         )
