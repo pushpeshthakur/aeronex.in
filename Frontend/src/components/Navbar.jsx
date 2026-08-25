@@ -25,17 +25,12 @@ const Navbar = ({ onOpenQuote }) => {
       <header className="w-full h-15  bg-white sticky top-0 z-20 ">
       <nav className="w-full h-full border flex items-center justify-between">
         <Link to="/home" className="flex items-center py-2 ">
-          <div className=" rounded-xl m-2 ml-8 border ">
+          <div className=" ml-8 ">
             <img
               src={logo}
               alt="Aeronex logo"
-              className="h-10 w-12 rounded-xl cursor-pointer"
+              className="w-38 cursor-pointer"
             />
-          </div>
-
-          <div className="flex items-center justify-cente p-2">
-            <p className="text-4xl font-extrabold  text-blue-950">Aero</p>
-            <p className="text-4xl font-extrabold  text-cyan-500">nex</p>
           </div>
         </Link>
 

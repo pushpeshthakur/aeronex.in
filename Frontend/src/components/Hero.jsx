@@ -15,7 +15,7 @@ const Hero = ({onOpenQuote}) => {
         <img
           src={heroCover}
           alt=""
-          className="w-full h-180 sm:h-150 md:h-150 lg:h-180 object-cover object-center"
+          className="w-full h-160 sm:h-150 md:h-130 lg:h-140 object-cover object-center"
         />
 
         <div className="absolute inset-0 flex flex-col items-start justify-center ml-5 sm:ml-10 md:ml-20 mt-10 gap-6 max-sm:pt-45">
@@ -31,7 +31,7 @@ const Hero = ({onOpenQuote}) => {
           </div>  
 
           
-          <div className="flex gap-4 flex-wrap max-sm:flex-col">
+          <div className="flex gap-4 flex-wrap max-sm:flex-col"> 
             <button
               href="#products"
               onClick={() => navigate("/products")}
@@ -48,6 +48,13 @@ const Hero = ({onOpenQuote}) => {
               Get a Quote
               <ArrowRight className="w-5.75 h-3.75 transition-transform duration-300 group-hover:translate-x-1 ml-2" />
             </button>
+
+            {/* <div className='' > 
+              <div className='w-7 rounded-2xl bg-indigo-400 pl-1 ' >
+                <span className="[writing-mode:vertical-lr] rotate-180 text-sm tracking-widest" >Scroll</span>
+                <div>  </div>
+              </div>
+            </div> */}
           </div>
           
         </div>

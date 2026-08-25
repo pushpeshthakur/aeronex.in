@@ -30,6 +30,37 @@ export const navLinks = [
   { label: "Contact", href: "/contact" },
 ];
 
+export const footerLinks = [
+  {
+    title: "Quick links",
+    links: [
+      {text: "Home", href: "/home"},
+      {text: "Products", href: "/products"},
+      {text: "About", href: "/about"},
+      {text: "Contact", href: "/contact"}
+    ]
+  },
+  {
+    title: "Need Help?",
+    links: [
+      {text: "Enquire", href: "/"},
+      {text: "Delivery information", href:"/"},
+      {text: "Payment method", href:"/"},
+      {text: "Track your order", href: "/"},
+      {text: "Contact Us", href: "/"},
+    ]
+  },
+  {
+    title: "Follow Us",
+    links: [
+      {text: "Instagram", href: "/"},
+      {text: "Twitter", href: "/"},
+      {text: "Facebook", href: "/"},
+      {text: "Youtube", href: "/"},
+    ]
+  },
+];
+
 export const products = [
   {
     icon: Wind,

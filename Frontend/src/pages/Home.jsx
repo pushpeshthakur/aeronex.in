@@ -5,6 +5,7 @@ import Hero from '../components/Hero'
 import Try from '../components/Try'
 import WhyChoose from '../components/WhyChoose'
 import QuoteForm from '../components/QuoteForm'
+import Footer from '../components/Footer'
 
 
 const Home = () => {
@@ -26,6 +27,7 @@ const Home = () => {
     {/* <Products /> */}
     <WhyChoose />
     <Try />
+    <Footer />
     </>
   )
 }
